@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: #eeedff;
+    position: relative;
+    overflow: hidden;
+}
+.menu_icon{
+    width: 35px;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    cursor: pointer;
+}
+.menu_box{
+    width: 80%;
+    background-color: #242449;
+    position: absolute;
+    top: 17%;
+    left: 10%;
+    padding: 50px 100px;
+    transition: top 1s;
+}
+.right_links{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+}
+.right_links img{
+    width: 50px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.right_links a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #f92537;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-transform: capitalize;
+}
+.menu_links a{
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    width: fit-content;
+    margin: 30px 0px;
+    font-size: 36px;
+    text-transform: capitalize;
+}
+.menu_links a::after{
+    content: "";
+    width: 40px;
+    height: 5px;
+    background-color: #f92537;
+    display: none;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+.menu_links a:hover{
+    font-weight: 700;
+}
+.menu_links a:hover::after{
+    display: inline-block;
+}
+
+
+/*  media screen  */
+
+@media (max-width: 560px){
+    .menu_box{
+        padding: 50px;
+    }
+    .menu_box .right_links{
+        right: 90px;  
+    }
+    .menu_box .menu_links a{
+        text-align: center;
+        width: 100%;
+    }
+    .menu_box .menu_links{
+        margin-top: 50px;
+        width: 100%;
+    }
+    .menu_icon{
+        width: 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+}
+
+@media (max-width: 450px){
+    .menu_box{
+        width: 100%;
+        left: 0px;
+    }
+}
+
+@media (max-width: 300px){
+    .menu_box{
+        width: 100%;
+        left: 0;
+    }
+    .menu_box .right_links{
+        right: unset;
+    }
+    .menu_links a{
+        font-size: 20px;
+    }
+}
